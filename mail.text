@@ -1,0 +1,11 @@
+I've been reading your paper and I see that you have a in pps and out 10Mhz
+signals. If I check the spec top in the repo, there is not input for the pps or
+output for the 10Mhz, could be possible to have this code? The same applies for
+the switch, in this case I didn't check if the pins are connected :/
+
+I didn't get yet the mini-backplane or the switches from seven solutions, in the
+case I get them, drivers, hal configuration are compatible with the backplane
+for 6 ports? if not getting them from wr-switch-sw would be ok? I have the file
+system that you gave during the workshop. 
+
+

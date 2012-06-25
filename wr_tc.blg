@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/dev/Arch Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: wr_tc.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
+Reallocated singl_function (elt_size=8) to 100 items from 50.
+Database file #1: IEEEabrv.bib
+Database file #2: ./biblio.bib
+Illegal end of database file---line 120 of file ./biblio.bib
+ : 
+ : 
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+-- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 13 entries,
+            4039 wiz_defined-function locations,
+            1271 strings with 16955 characters,
+and the built_in function-call counts, 5648 in all, are:
+= -- 404
+> -- 137
+< -- 25
++ -- 76
+- -- 25
+* -- 227
+:= -- 930
+add.period$ -- 23
+call.type$ -- 13
+change.case$ -- 13
+chr.to.int$ -- 75
+cite$ -- 13
+duplicate$ -- 463
+empty$ -- 495
+format.name$ -- 31
+if$ -- 1235
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 104
+newline$ -- 62
+num.names$ -- 7
+pop$ -- 264
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 433
+stack$ -- 0
+substring$ -- 88
+swap$ -- 323
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 13
+warning$ -- 0
+while$ -- 10
+width$ -- 15
+write$ -- 123
+(There was 1 error message)
