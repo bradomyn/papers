@@ -78,4 +78,13 @@ P.~Moreira, P.~Alvarez, J.~Serrano, I.~Darwezeh, and T.~Wlostowski, ``{Digital
 J.~Burch, K.~Green, J.~Nakulski, and D.~Vook, ``Verifying the performance of
   transparent clocks in ptp systems,'' \emph{Proceedings of ISPCS}, 2009.
 
+\bibitem{biblio:tc_perf_2}
+J.~Han and D.-K. Jeong, ``{A Practical Implementation of IEEE 1588-2008
+  Transparent Clock for Distributed Measurement and Control Systems},''
+  \emph{IEEE Transactions on Intromentation and Measurement}, vol.~59, no.~2,
+  2010.
+
+\bibitem{biblio:lic}
+{CERN Open Hardware Licence}.
+
 \end{thebibliography}
