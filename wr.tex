@@ -1,55 +1,51 @@
 \section{White Rabbit PTP}
 \label{sec:wr}
 
-
-
 \subsection{White Rabbit Synchronization}
+WR reaches subnanoseconds synchronization with  picoseconds jitter, basically, 
+characterizing the asymmetries of the link, and using a clock lookback
+technique for tracking the phase shift between the master reference clock
+signal and the looked back clock signal from the slave. In order to gather and
+realize such as measurements WR extends PTP, WRPTP~\cite{biblio:ispcs_m}. 
+The \figurename~\ref{fig:wr_ptp} shows the WRPTP flow of messages and the
+integration with standard PTP once is stablished.
 
-White Rabbit is able to reach sub-nanoseconds accuracy and picoseconds
-precision between two clocks:
+Bellow, a resume of the steps, measurement and hardware support needed for the 
+WR synchronization between two WR devices. A thoroughly description is presented 
+in ~\cite{biblio:tomas} and ~\cite{biblio:wrptp}.
 
-\begin{itemize}
-    \item Characterizing the asymmetry of the links 
-    \item Measuring the phase shift of reference clock using clock loopback technique.
-\end{itemize}
+\subsubsection{WR Discovery and Synthonization}
 
-The \figurename~\ref{fig:wr_ptp} shows the WRPTP ~\cite{biblio:ispcs_m} flow and
-its integration with the standard PTP . Bellow, a resume of the steps the WR synchronization 
-process is outlined. A thoroughly description is presented in ~\cite{biblio:tomas} 
-and ~\cite{biblio:wrptp}.
-
-\subsubsection{Synthonization}
-
-WRPTP initiates with a WR Announcement, in order to discover WR devices. 
-If the other node is a WR device, the Lock procedure is triggered by the master.  
-WRPTP uses SyncE to distribute a common frequency throughout. The slave will be 
-frequency locked to the master. After what, both clocks will calibrate asymmetries 
-present in the link. 
+A WR clock initiates WRPTP with an announcement message in order to discover
+others WR devices. If a WR device has been discover, the master will initiate the 
+frequency lock procedure. WRPTP uses SyncE to distribute a common frequency throughout 
+the network, the WR Slaves are frequency locked to the WR Master. 
 
 \subsubsection{Asymmetry Calibration}
 
-WR calibrates the asymmetries in a optical link taking in consideration:
+Once the slave is locked to the master, the WR devices initiate to calibrates the 
+asymmetries in the common optical link taking in consideration:
 
 \begin{itemize}
     \item Fixed delays due to transmission circuitry
     \item Asymmetry of the optical transceivers and PHYs 
-    \item Chromatic dispersion of the fiber optic    
+    \item Asymmetry of the propagation delay in the fiber caused by the chromatic dispersion
 \end{itemize}
 
 \subsubsection{Coarse and Fine Delay Measurement}
 
-After the calibration process, a first delay measurement, \textit{Coarse
-Measurement} is issued using the Delay Request-Respond (DRR) mechanism. 
-The next step towards the synchronization requires to figure out the phase shift
-between the master and the looped-back clock from the sender, round trip 
-phase shift, $phase_{mm}$. The ~\ref{fig:time_stamp} shows how between the 
-master and the TC, the clock is looped back and the phase shift is measured 
+After the devices are calibrated, a first delay measurement, \textit{Coarse
+Measurement}, is issued using the delay request-respond mechanism. 
+The next step towards the synchronization requires the measurement of the phase shift
+between a reference (master) clock signal and the looped-back clock signal
+from  the slave, the \textit{round trip phase shift}, $phase_{mm}$. In figure~\ref{fig:time_stamp}, 
+the clock signal is looped back and the phase shift is measured 
 using a phase detector, DDMTD ~\cite{biblio:ddmtd}. With the
 $phase_{mm}$, the delay round trip, $delay_{mm}$ is calculated. The $phase_{s}$
 is the phase shift of the clock adjustment derived form the $offset_ms$. Using the 
-$phase_{mm}$ and $phase_{s}$ the timestamps on ingress ports can be enhanced, $t_{4p}$  $t_{2p}$,
-using an algorithm described in ~\cite{biblio:tomas}.
-Only timestamps on ingress ports need to bed enhanced, since they are generated 
+$phase_{mm}$ and $phase_{s}$ the timestamps on ingress ports can be enhanced,
+$t_{2p}$ and  $t_{4p}$, using an decision algorithm described in ~\cite{biblio:tomas}.
+Only timestamps on ingress ports need to be enhanced, since they are generated 
 asynchronously to the reference clock domain. The \textit{Fine Delay Measurement}, round trip,
 is calculated as follows using now the enhanced timestamps :
 
@@ -60,26 +56,26 @@ is calculated as follows using now the enhanced timestamps :
 
 \subsubsection{Synchronization}
 
-In order to finish the synchronization of the Slave clock to the Master Clock
-the offset between both the clocks must be calculate, $offset_{MS}$. The round
-trip can be expressed as function of the  delay master to slave, $\sigma _{ms}$ , slave to
-master $sigma _{sm}$ and the sum of the fixed delays, $\delta$ , obtained during the calibration.
+In order to finish the synchronization, the offset between both clocks must be calculated, $offset_{Mmm}$. 
+The round trip can be expressed as function of the  delay master to slave, $\sigma _{ms}$ , slave to
+master $\sigma _{sm}$ and the sum of the fixed delays, $\Delta$ , obtained during the calibration.
 
 \begin{equation}
   \label{eq:round_trip_2}
     delay_{mm} = \Delta + \sigma _{ms} + \sigma _{sm}
 \end{equation}
 
-The ratio between single delays corresponds to the asymmetry of the propagation speed of
-the different wavelength due to the chromatic dispersion, and is expressed:
+The ratio between single delays is proportional to the asymmetry of the speed of
+the different wavelengths due to the chromatic dispersion in the fiber optic
+link:
 
 \begin{equation}
     \label{eq:disp}
     (\alpha-1) = \frac{\sigma_{ms}}{\sigma_{sm}}
 \end{equation}
 
-From (\ref{eq:round_trip}), (\ref{eq:round_trip_2}) and  (\ref{eq:disp}) the delay
-master to slave and $offset_{MS}$:
+Combining equations (\ref{eq:round_trip}), (\ref{eq:round_trip_2}) and
+(\ref{eq:disp}), the delay master to slave and $offset_{MS}$:
 
 \begin{equation}
     \label{eq:delayms}

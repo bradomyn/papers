@@ -1,28 +1,29 @@
 \section{Introduction}
 
-Synchronization is an important feature in control and timing
+Synchronization is one of the most important feature in control and timing
 systems. The performance depends on the synchronization accuracy between 
 the networking elements throughout the network, specially in systems 
 where time-critical events are accurately scheduled to be executed in
-distributed nodes. 
+distributed nodes. Such systems are quite common in facilities like particle 
+accelerators like GSI and CERN. WR is the chosen technology for the timing system 
+at GSI ~\cite{biblio:FAIRtimingSystem} and CERN ~\cite{biblio:cernWr}. 
+Besides these two facilities, in the WR project ~\cite{biblio:wrproj}, there are others 
+instituted and experiments (LHAASO, KM3NeT etc...) that are taking an active part in 
+development and adoption of the technology, as well as commercial companies (Seven Solutions, 
+Integrasys, Elproma, Creotech, National Instruments etc..).
 
-White Rabbit (WR) technology provides allows to create a reliable and robust Ethernet network with low-latency, 
-deterministic packet delivery and synchronization. WR is based on the standards:Synchronous Ethernet 
-(SyncE) ~\cite{biblio:synch}, Ethernet (IEEE~802.3) ~\cite{biblio:ethernet}. Besides, it extends IEEE~1588 
-(PTP)~\cite{biblio:ptp} for achieving subnanoseconds accuracy and picoseconds precision.
-WR will be the control and timing system at GSI ~\cite{biblio:FAIRtimingSystem} and CERN ~\cite{biblio:cernWr}. 
-There are others instituted and facilities  (LHAASO, KM3NeT etc...) that are taking an active part in 
-the WR Project ~\cite{biblio:wrproj}, as well as commercial companies (Seven Solutions, Integrasys, Elproma, 
-Creotech, National Instruments etc..).
+White Rabbit (WR) provides the technology and techniques to create a 
+reliable and robust data and timing network with low-latency, deterministic packet 
+delivery and synchronization. WR is based on the standards Synchronous Ethernet 
+(SyncE) ~\cite{biblio:synch} and  Ethernet (IEEE~802.3) ~\cite{biblio:ethernet}. Besides, it extends IEEE~1588 
+(PTP)~\cite{biblio:ptp} for achieving sub nanoseconds  accuracy and picoseconds precision.
 
-So far in WR, the synchronization is propagated from the Master Clock, WR Master, to the
-Slaves Clock, WR Slave, in the network using White Rabbit Switches (WRS). A WRS,
-in terms of PTP, is a two-step Boundary Clocks using the Delay Request-Respond Mechanism ~\cite{biblio:ptp}  
+So far in WR, the synchronization is propagated in a hierarchical topology, from the master clock, 
+WR Master (master), to the slave clocks, WR Slave (slave), using White Rabbit Switches (WRS). 
+A WRS, in terms of PTP, is a two-step boundary clocks using the delay request-respond mechanism ~\cite{biblio:ptp}  
 for the synchronization. In this paper, the author proposes an implementation
 of a Transparent Clock (TC) using the existing WR extension to PTP, WRPTP ~\cite{biblio:wrptp} 
-and the existing hardware with WR support ~\cite{biblio:spec},~\cite{biblio:wrswitch}, 
-and evaluates the principle features that characterizes the performance of a TC. 
+and WR hardware ~\cite{biblio:spec},~\cite{biblio:wrswitch}, and evaluates the
+WR TC taking into account the principle features that characterizes the performance of a TC. 
 
-Since GSI will adopt WR technology for the new control and timing system, the
-author presents a timing topology making use of TC based on WR. 
 

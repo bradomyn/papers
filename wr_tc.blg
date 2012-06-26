@@ -9,11 +9,20 @@ Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: IEEEabrv.bib
 Database file #2: ./biblio.bib
-Illegal end of database file---line 130 of file ./biblio.bib
+Repeated entry---line 127 of file ./biblio.bib
+ : @standard{biblio:ethernet
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 137 of file ./biblio.bib
+ : @electronic{biblio:wrswitch
+ :                            ,
+I'm skipping whatever remains of this entry
+Illegal end of database file---line 148 of file ./biblio.bib
  : 
  : 
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "i"
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -21,7 +30,7 @@ I'm skipping whatever remains of this entry
 Done.
 You've used 15 entries,
             4039 wiz_defined-function locations,
-            1278 strings with 17195 characters,
+            1278 strings with 17198 characters,
 and the built_in function-call counts, 6346 in all, are:
 = -- 458
 > -- 147
@@ -60,4 +69,4 @@ warning$ -- 0
 while$ -- 11
 width$ -- 17
 write$ -- 138
-(There was 1 error message)
+(There were 3 error messages)

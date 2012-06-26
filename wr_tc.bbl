@@ -21,6 +21,18 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{biblio:FAIRtimingSystem}
+T.~Fleck, C.~Prados, S.~Rauch, and M.~Kreider, ``{FAIR} timing system,'' GSI,
+  Darmstadt, Germany, Tech. Rep., 2009, v1.2.
+
+\bibitem{biblio:cernWr}
+J.~Bau and M.~Lipi\'{n}ski, ``{Discussion On A White Rabbit based CERN Control
+  and Timing Network},'' \url{http://www.ohwr.org/documents/85}, October 2011,
+  v1.1.
+
+\bibitem{biblio:wrproj}
+{"White Rabbit Project}. \url{http://www.ohwr.org/projects/white-rabbit}.
+
 \bibitem{biblio:synch}
 \emph{Timing characteristics of a synchronous Ethernet equipment slave clock
   {(EEC)}}, ITU-T Std. G.8262, 2007.
@@ -36,18 +48,6 @@
 \emph{IEEE Standard for a Precision Clock Synchronization Protocol for
   Networked Measurement and Control Systems}, IEEE Std. 1588-2008, 2008.
 
-\bibitem{biblio:FAIRtimingSystem}
-T.~Fleck, C.~Prados, S.~Rauch, and M.~Kreider, ``{FAIR} timing system,'' GSI,
-  Darmstadt, Germany, Tech. Rep., 2009, v1.2.
-
-\bibitem{biblio:cernWr}
-J.~Bau and M.~Lipi\'{n}ski, ``{Discussion On A White Rabbit based CERN Control
-  and Timing Network},'' \url{http://www.ohwr.org/documents/85}, October 2011,
-  v1.1.
-
-\bibitem{biblio:wrproj}
-{"White Rabbit Project}. \url{http://www.ohwr.org/projects/white-rabbit}.
-
 \bibitem{biblio:wrptp}
 E.~Cota, M.~Lipi\'{n}ski, T.~W\l{}ostowski, E.~Bij, and J.~Serrano, ``{White
   Rabbit Specification: Draft for Comments},''
@@ -60,7 +60,7 @@ E.~Cota, M.~Lipi\'{n}ski, T.~W\l{}ostowski, E.~Bij, and J.~Serrano, ``{White
 {White Rabbit Switch v3}. \url{http://www.sevensols.com/whiterabbitsolution/}.
 
 \bibitem{biblio:ispcs_m}
-M.~Lipiński, T.~Włostowski, J.~Serrano, and P.~Alvarez, ``{White Rabbit: a
+M.~Lipi\'{n}ski, T.~Włostowski, J.~Serrano, and P.~Alvarez, ``{White Rabbit: a
   PTP application for robust sub-nanosecond synchronization},''
   \emph{Proceedings of ISPCS}, 2011.
 
