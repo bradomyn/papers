@@ -2,28 +2,29 @@
 \label{sec:wr}
 
 \subsection{White Rabbit Synchronization}
-WR reaches subnanoseconds synchronization with  picoseconds jitter, basically, 
-characterizing the asymmetries of the link, and using a clock lookback
+WR reaches sub-nanosecond synchronization with  picoseconds jitter by
+characterizing the asymmetries of the link and using a clock lookback
 technique for tracking the phase shift between the master reference clock
-signal and the looked back clock signal from the slave. In order to gather and
-realize such as measurements WR extends PTP, WRPTP~\cite{biblio:ispcs_m}. 
-The \figurename~\ref{fig:wr_ptp} shows the WRPTP flow of messages and the
-integration with standard PTP once is stablished.
+signal and the looped back clock signal from the slave. In order to gather and
+realize such measurements, WR extends PTP, WRPTP~\cite{biblio:ispcs_m}. 
+Figure~\ref{fig:wr_ptp} shows the WRPTP flow of messages and the
+integration with standard PTP once it is established .
 
-Bellow, a resume of the steps, measurement and hardware support needed for the 
+Below, a resume of the steps, measurement and hardware support needed for the 
 WR synchronization between two WR devices. A thoroughly description is presented 
 in ~\cite{biblio:tomas} and ~\cite{biblio:wrptp}.
 
-\subsubsection{WR Discovery and Synthonization}
+\subsubsection{WR Discovery and Syntonization}
 
 A WR clock initiates WRPTP with an announcement message in order to discover
-others WR devices. If a WR device has been discover, the master will initiate the 
+other WR devices. If a WR device has been discover the master will initiate the 
 frequency lock procedure. WRPTP uses SyncE to distribute a common frequency throughout 
-the network, the WR Slaves are frequency locked to the WR Master. 
+the network. The WR Slaves decodes the clock signal from the data stream sent
+from the WR Master, and locks to it.
 
 \subsubsection{Asymmetry Calibration}
 
-Once the slave is locked to the master, the WR devices initiate to calibrates the 
+Once the slave is locked to the master, the WR devices initiate to calibrate the 
 asymmetries in the common optical link taking in consideration:
 
 \begin{itemize}
@@ -38,13 +39,14 @@ After the devices are calibrated, a first delay measurement, \textit{Coarse
 Measurement}, is issued using the delay request-respond mechanism. 
 The next step towards the synchronization requires the measurement of the phase shift
 between a reference (master) clock signal and the looped-back clock signal
-from  the slave, the \textit{round trip phase shift}, $phase_{mm}$. In figure~\ref{fig:time_stamp}, 
+from  the slave, the \textit{round trip phase shift}, $phase_{mm}$. In Figure~\ref{fig:time_stamp}, 
 the clock signal is looped back and the phase shift is measured 
-using a phase detector, DDMTD ~\cite{biblio:ddmtd}. With the
+using a phase detector, Digital Dual Mixer Time Difference (DDMTD) ~\cite{biblio:ddmtd}. With the
 $phase_{mm}$, the delay round trip, $delay_{mm}$ is calculated. The $phase_{s}$
-is the phase shift of the clock adjustment derived form the $offset_ms$. Using the 
+is the phase shift of the clock adjustment derived form the $offset_{ms}$. Using the 
 $phase_{mm}$ and $phase_{s}$ the timestamps on ingress ports can be enhanced,
-$t_{2p}$ and  $t_{4p}$, using an decision algorithm described in ~\cite{biblio:tomas}.
+$t_{2p}$\footnote{The enhanced timestamps are distinguished from the
+non-enhanced with a $p$} and  $t_{4p}$, using a decision algorithm described in ~\cite{biblio:tomas}.
 Only timestamps on ingress ports need to be enhanced, since they are generated 
 asynchronously to the reference clock domain. The \textit{Fine Delay Measurement}, round trip,
 is calculated as follows using now the enhanced timestamps :
@@ -56,7 +58,7 @@ is calculated as follows using now the enhanced timestamps :
 
 \subsubsection{Synchronization}
 
-In order to finish the synchronization, the offset between both clocks must be calculated, $offset_{Mmm}$. 
+In order to finish the synchronization, the offset between both clocks must be calculated, $offset_{mm}$. 
 The round trip can be expressed as function of the  delay master to slave, $\sigma _{ms}$ , slave to
 master $\sigma _{sm}$ and the sum of the fixed delays, $\Delta$ , obtained during the calibration.
 
@@ -94,7 +96,6 @@ $t_{5}$ and $t_{6p})$ and the DDMTD tracks changes in the $phase_{mm}$ over time
 
 \begin{figure}[!t]
 \centering
-%\includegraphics[width=2.95in]{fig/wrCRS.eps}
 \includegraphics[scale=0.25]{fig/wr_ptp.png}
 \caption{WR PTP Message Flow and PTP}
 \label{fig:wr_ptp}

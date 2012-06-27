@@ -1,26 +1,23 @@
-\section{Conclusions and Future Work}
+\section{Conclusion and Future Work}
 
+The implementation and evaluation presented in this paper, indicates that WR TCs
+can provide a high performance in terms of CFE, UR and reliability.The calculation of the residency 
+time and delay between clocks in a P2P should be as accurate as in WR BC, although the end-to-end 
+synchronization accuracy of the WR P2P and E2E TC needs a model for an enhancement of timestamping across TC 
+in order to achieve the accuracy and precision that WR offers.
 
-Conclusion-->>>
-
-
-
-
-
-
-Currently the WR Switch V3 ~\cite{biblio:wrswitch} behaves as Boundary clock.
-After an exhaustive examination of the WR project, the following features should be
+Currently the WR Switch V3 ~\cite{biblio:wrswitch} behaves as BC.
+After an exhaustive examination of the WR project, the following features will be
 added to the existing gateware and software (no modifications in the hardware)
 for a proof of concept WR TC implementation:
 
 \begin{itemize}
     \item Peer Delay Mechanism
     \item WR TC clock behaviour
-    \item Hardware process of Sync and Follow Up messages
-    \item Enhanced Timestamping across TC using WR
+    \item Enhanced timestamping across TCs using WR
 \end{itemize}
 
-The openness of the project \footnote{The WRS is licensed under \textit{CERN Open Hardware Licence}
-~\cite{biblio:lic}  and is publicly available in the Open Hardware Repository.},
+The openness of the project\footnote{The WRS is licensed under \textit{CERN Open Hardware Licence}
+~\cite{biblio:lic}  and is publicly available on the Open Hardware Repository.},
 plus the amount of work already done, makes the implementation achievable with a
 reasonable effort.

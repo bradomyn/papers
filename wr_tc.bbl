@@ -30,9 +30,6 @@ J.~Bau and M.~Lipi\'{n}ski, ``{Discussion On A White Rabbit based CERN Control
   and Timing Network},'' \url{http://www.ohwr.org/documents/85}, October 2011,
   v1.1.
 
-\bibitem{biblio:wrproj}
-{"White Rabbit Project}. \url{http://www.ohwr.org/projects/white-rabbit}.
-
 \bibitem{biblio:synch}
 \emph{Timing characteristics of a synchronous Ethernet equipment slave clock
   {(EEC)}}, ITU-T Std. G.8262, 2007.
@@ -47,6 +44,9 @@ J.~Bau and M.~Lipi\'{n}ski, ``{Discussion On A White Rabbit based CERN Control
 \bibitem{biblio:ptp}
 \emph{IEEE Standard for a Precision Clock Synchronization Protocol for
   Networked Measurement and Control Systems}, IEEE Std. 1588-2008, 2008.
+
+\bibitem{biblio:wrproj}
+{"White Rabbit Project}. \url{http://www.ohwr.org/projects/white-rabbit}.
 
 \bibitem{biblio:wrptp}
 E.~Cota, M.~Lipi\'{n}ski, T.~W\l{}ostowski, E.~Bij, and J.~Serrano, ``{White
@@ -83,6 +83,11 @@ J.~Han and D.-K. Jeong, ``{A Practical Implementation of IEEE 1588-2008
   Transparent Clock for Distributed Measurement and Control Systems},''
   \emph{IEEE Transactions on Intromentation and Measurement}, vol.~59, no.~2,
   2010.
+
+\bibitem{biblio:vlan}
+\emph{802.1Q-2011 - IEEE Standard for Local and metropolitan area
+  networks--Media Access Control (MAC) Bridges and Virtual Bridged Local Area
+  Networks}, Std.
 
 \bibitem{biblio:lic}
 {CERN Open Hardware Licence}.

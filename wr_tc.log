@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2012/dev/Arch Linux) (format=pdflatex 2012.4.20)  25 JUN 2012 19:07
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2012/dev/Arch Linux) (format=pdflatex 2012.5.18)  27 JUN 2012 19:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -254,34 +254,41 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 tex/updmap/pdftex.map}
 
 
-] <fig/wr_ptp.png, id=15, 836.12375pt x 1426.32875pt>
+] <fig/wr_ptp.png, id=12, 836.12375pt x 1426.32875pt>
 File: fig/wr_ptp.png Graphic file (type png)
 
 <use fig/wr_ptp.png>
-Package pdftex.def Info: fig/wr_ptp.png used on input line 98.
+Package pdftex.def Info: fig/wr_ptp.png used on input line 99.
 (pdftex.def)             Requested size: 209.03043pt x 356.58131pt.
 ) (./wr_transparentcloks.tex
-<fig/wr_schema_hw_bw.png, id=17, 1824.8175pt x 1351.0475pt>
+<fig/wr_schema_hw_bw.png, id=14, 1813.77625pt x 1294.8375pt>
 File: fig/wr_schema_hw_bw.png Graphic file (type png)
 
 <use fig/wr_schema_hw_bw.png>
 Package pdftex.def Info: fig/wr_schema_hw_bw.png used on input line 14.
-(pdftex.def)             Requested size: 492.70732pt x 364.7877pt.
+(pdftex.def)             Requested size: 489.72614pt x 349.6108pt.
  [2 <./fig/wr_ptp.png>]) (./implementation.tex
-<fig/time_stamps_tc.png, id=24, 1075.01625pt x 478.78876pt>
+<fig/time_stamps_tc.png, id=25, 1075.01625pt x 478.78876pt>
 File: fig/time_stamps_tc.png Graphic file (type png)
 
 <use fig/time_stamps_tc.png>
-Package pdftex.def Info: fig/time_stamps_tc.png used on input line 53.
+Package pdftex.def Info: fig/time_stamps_tc.png used on input line 20.
 (pdftex.def)             Requested size: 462.24799pt x 205.87515pt.
  [3 <./fig/wr_schema_hw_bw.png>]
+<fig/wr_port.png, id=30, 672.5125pt x 311.1625pt>
+File: fig/wr_port.png Graphic file (type png)
+ <use fig/wr_port.png>
+Package pdftex.def Info: fig/wr_port.png used on input line 69.
+(pdftex.def)             Requested size: 235.38289pt x 108.90851pt.
 
-LaTeX Warning: Citation `i' on page 4 undefined on input line 78.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-) (./conclusion.tex) (./ack.tex
+ [4 <./fig/time_stamps_tc.png> <./fig/wr_port.png>]) (./conclusion.tex) (./ack.
+tex
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no „ in font ptmr7t!
-) [4 <./fig/time_stamps_tc.png>] (./wr_tc.bbl
+)
+(./wr_tc.bbl
 Underfull \hbox (badness 6825) in paragraph at lines 52--55
 []\OT1/ptm/m/n/8 E. Cota, M. Lipi[]nski, T. W lostowski, E. Bij, and J. Ser-
  []
@@ -293,6 +300,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--55
 
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
+
+Underfull \hbox (badness 1742) in paragraph at lines 90--91
+[]\OT1/ptm/m/it/8 802.1Q-2011 - IEEE Stan-dard for Lo-cal and metropoli-tan are
+a
+ []
+
 )
 
 ** Conference Paper **
@@ -305,38 +318,34 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5
-
-] (./wr_tc.aux)
-
-LaTeX Warning: There were undefined references.
-
+[5] (./wr_tc.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 2339 strings out of 493629
- 36805 string characters out of 3148778
- 97453 words of memory out of 3000000
- 5592 multiletter control sequences out of 15000+200000
- 41159 words of font info for 77 fonts, out of 3000000 for 9000
+ 2350 strings out of 493629
+ 36962 string characters out of 3148778
+ 98482 words of memory out of 3000000
+ 5601 multiletter control sequences out of 15000+200000
+ 42883 words of font info for 79 fonts, out of 3000000 for 9000
  834 hyphenation exceptions out of 8191
  38i,13n,24p,235b,355s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a
-.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf
--dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on wr_tc.pdf (5 pages, 383255 bytes).
+c/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></
+usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fo
+nts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/ut
+mr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on wr_tc.pdf (5 pages, 428443 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 82 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

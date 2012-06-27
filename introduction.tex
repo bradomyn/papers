@@ -2,28 +2,43 @@
 
 Synchronization is one of the most important feature in control and timing
 systems. The performance depends on the synchronization accuracy between 
-the networking elements throughout the network, specially in systems 
+the networking elements throughout the network, especially in systems 
 where time-critical events are accurately scheduled to be executed in
-distributed nodes. Such systems are quite common in facilities like particle 
-accelerators like GSI and CERN. WR is the chosen technology for the timing system 
-at GSI ~\cite{biblio:FAIRtimingSystem} and CERN ~\cite{biblio:cernWr}. 
-Besides these two facilities, in the WR project ~\cite{biblio:wrproj}, there are others 
-instituted and experiments (LHAASO, KM3NeT etc...) that are taking an active part in 
+distributed nodes. Such systems are quite common in particle accelerators
+facilities, like the new timing system at GSI~\cite{biblio:FAIRtimingSystem} and 
+CERN~\cite{biblio:cernWr}. The chosen technology  in both facilities is based on
+the White Rabbit project. White Rabbit (WR) provides the technology and techniques to create a 
+reliable and robust data and timing network with low-latency, deterministic packet 
+delivery and synchronization. WR is based on the standards Synchronous Ethernet 
+(SyncE)~\cite{biblio:synch} and  Ethernet (IEEE~802.3)~\cite{biblio:ethernet}. Besides, it extends IEEE~1588 
+(PTP)~\cite{biblio:ptp} for achieving sub-nanoseconds  accuracy and picoseconds precision.
+Besides GSI and CERN, in the WR project~\cite{biblio:wrproj} there are other 
+institutes and experiments (LHAASO, KM3NeT etc...) that are taking an active part in 
 development and adoption of the technology, as well as commercial companies (Seven Solutions, 
 Integrasys, Elproma, Creotech, National Instruments etc..).
 
-White Rabbit (WR) provides the technology and techniques to create a 
-reliable and robust data and timing network with low-latency, deterministic packet 
-delivery and synchronization. WR is based on the standards Synchronous Ethernet 
-(SyncE) ~\cite{biblio:synch} and  Ethernet (IEEE~802.3) ~\cite{biblio:ethernet}. Besides, it extends IEEE~1588 
-(PTP)~\cite{biblio:ptp} for achieving sub nanoseconds  accuracy and picoseconds precision.
-
 So far in WR, the synchronization is propagated in a hierarchical topology, from the master clock, 
 WR Master (master), to the slave clocks, WR Slave (slave), using White Rabbit Switches (WRS). 
-A WRS, in terms of PTP, is a two-step boundary clocks using the delay request-respond mechanism ~\cite{biblio:ptp}  
+A WRS, in terms of PTP, is a two-step BC using the delay request-respond
+mechanism (DDR) ~\cite{biblio:ptp}  
 for the synchronization. In this paper, the author proposes an implementation
-of a Transparent Clock (TC) using the existing WR extension to PTP, WRPTP ~\cite{biblio:wrptp} 
-and WR hardware ~\cite{biblio:spec},~\cite{biblio:wrswitch}, and evaluates the
-WR TC taking into account the principle features that characterizes the performance of a TC. 
+of a Transparent Clock (TC) using the existing WR extension to PTP, WRPTP~\cite{biblio:wrptp} 
+and WR hardware~\cite{biblio:spec},~\cite{biblio:wrswitch}. 
+
+Among the advantages of the Transparent Clocks (TC) for large timing networks
+(e.g more than 2000 slaves in GSI), it is especially interesting
+for the WR project the Peer-to-Peer TCs. They are suitable for timing
+systems that require high resilience in the event of changes in the topology 
+(e.g. switch failure), since the delay measurement is already available for
+the synchronization in the new link, in contrast to Boundary Clocks (BC) that
+have to calculate the delay once the new link is active. Another attractive feature 
+of TCs for a WR timing system is the measurement of the residence time in the network 
+devices which eliminates the error that results from queuing delays. 
+
+In this paper, the author describes the WRPTP and WR synchronization (Section
+II), and how the extension can be adopted by E2E and P2P TC (Section III). Then,
+the author presents issues of implementing a WR TC  and an estimation of the performance.
+
+
 
 

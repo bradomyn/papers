@@ -9,9 +9,10 @@ Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: IEEEabrv.bib
 Database file #2: ./biblio.bib
-Repeated entry---line 127 of file ./biblio.bib
- : @standard{biblio:ethernet
- :                          ,
+I was expecting a `,' or a `}'---line 130 of file ./biblio.bib
+ :   
+ :   year      =  "2011",
+(Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Repeated entry---line 137 of file ./biblio.bib
  : @electronic{biblio:wrswitch
@@ -22,51 +23,51 @@ Illegal end of database file---line 148 of file ./biblio.bib
  : 
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "i"
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--missing institution in biblio:vlan
 
 Done.
-You've used 15 entries,
+You've used 16 entries,
             4039 wiz_defined-function locations,
-            1278 strings with 17198 characters,
-and the built_in function-call counts, 6346 in all, are:
-= -- 458
-> -- 147
+            1280 strings with 17353 characters,
+and the built_in function-call counts, 6594 in all, are:
+= -- 473
+> -- 148
 < -- 27
-+ -- 81
++ -- 82
 - -- 27
-* -- 251
-:= -- 1048
-add.period$ -- 26
-call.type$ -- 15
+* -- 260
+:= -- 1086
+add.period$ -- 27
+call.type$ -- 16
 change.case$ -- 15
 chr.to.int$ -- 75
-cite$ -- 15
-duplicate$ -- 529
-empty$ -- 565
+cite$ -- 17
+duplicate$ -- 556
+empty$ -- 593
 format.name$ -- 34
-if$ -- 1390
+if$ -- 1443
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 118
-newline$ -- 68
+int.to.str$ -- 16
+missing$ -- 125
+newline$ -- 71
 num.names$ -- 8
-pop$ -- 299
+pop$ -- 318
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 494
+skip$ -- 512
 stack$ -- 0
 substring$ -- 89
-swap$ -- 361
+swap$ -- 376
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 15
-warning$ -- 0
+type$ -- 16
+warning$ -- 1
 while$ -- 11
-width$ -- 17
-write$ -- 138
+width$ -- 18
+write$ -- 144
 (There were 3 error messages)
